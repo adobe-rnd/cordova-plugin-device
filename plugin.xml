@@ -22,7 +22,7 @@
     xmlns:rim="http://www.blackberry.com/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-device"
-    version="1.1.1-dev">
+    version="1.1.2-dev">
     <name>Device</name>
     <description>Cordova Device Plugin</description>
     <license>Apache 2.0</license>
@@ -56,13 +56,13 @@
 
     <!-- android -->
     <platform name="android">
-        <config-file target="res/xml/config.xml" parent="/*">
+        <config-file target="app/src/main/res/xml/config.xml" parent="/*">
             <feature name="Device" >
                 <param name="android-package" value="org.apache.cordova.device.Device"/>
             </feature>
         </config-file>
 
-        <source-file src="src/android/Device.java" target-dir="src/org/apache/cordova/device" />
+        <source-file src="src/android/Device.java" target-dir="app/src/main/java/org/apache/cordova/device" />
     </platform>
 
     <!-- amazon-fireos -->
@@ -75,7 +75,7 @@
 
         <source-file src="src/android/Device.java" target-dir="src/org/apache/cordova/device" />
     </platform>
-    
+
     <!-- ubuntu -->
     <platform name="ubuntu">
         <header-file src="src/ubuntu/device.h" />
